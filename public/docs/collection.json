@@ -1,0 +1,331 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "280e1646-7d69-43ef-a4e9-0c0c2ffe209a",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/v1\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"dolor\",\"email\":\"chaz73@example.org\",\"password\":\"voluptas\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/v1\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"repellendus\",\"password\":\"non\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/v1\/movies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/movies"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"laboriosam\",\"summary\":\"excepturi\",\"coverImage\":\"repudiandae\",\"genreIds\":\"repellat\",\"tagIds\":\"eum\",\"imdbRatings\":\"reprehenderit\",\"pdfLink\":\"non\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/v1\/movies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/movies"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"magnam\",\"summary\":\"eos\",\"genreIds\":\"sit\",\"tagIds\":\"voluptate\",\"imdbRatings\":\"sit\",\"pdfLink\":\"labore\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/v1\/movies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/movies"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/v1\/movies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/movies"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"result\":{\"data\":[{\"id\":5,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/9PrFke5nH2..png\",\"imdbRatings\":6.9},{\"id\":4,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/KHZYMTP1k7..png\",\"imdbRatings\":6.9},{\"id\":3,\"title\":\"F 9\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xXpfHopPC9..png\",\"imdbRatings\":6.9},{\"id\":1,\"title\":\"Lorem Ipsum\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/vBJGKV3uNk..png\",\"imdbRatings\":4.6}],\"pagination\":{\"lastPage\":1,\"currentPage\":1,\"perPage\":10,\"totalItems\":4}},\"statusCode\":200,\"message\":\"Success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/movies\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/movies\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/movies\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the movie."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"result\":{\"id\":1,\"title\":\"Lorem Ipsum\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/vBJGKV3uNk..png\",\"genres\":[{\"id\":1,\"name\":\"Romance\"}],\"authorName\":\"thura\",\"tags\":[{\"id\":1,\"name\":\"Family\"}],\"imdbRatings\":4.6,\"pdfLink\":\"https:\\\/\\\/www.w3.org\\\/WAI\\\/ER\\\/tests\\\/xhtml\\\/testfiles\\\/resources\\\/pdf\\\/dummy.pdf\",\"relatedMovies\":[{\"id\":3,\"title\":\"F 9\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xXpfHopPC9..png\",\"imdbRatings\":6.9},{\"id\":4,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/KHZYMTP1k7..png\",\"imdbRatings\":6.9},{\"id\":5,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/9PrFke5nH2..png\",\"imdbRatings\":6.9}]},\"statusCode\":200,\"message\":\"Success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/v1\/comment",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/comment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/comment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"movieId\":10,\"email\":\"lucie40@example.com\",\"description\":\"nostrum\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
