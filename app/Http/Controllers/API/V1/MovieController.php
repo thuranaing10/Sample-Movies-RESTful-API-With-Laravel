@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\MovieRequest;
 use App\Http\Controllers\Controller;
 use App\Repositories\MovieRepository;
+use App\Http\Resources\MovieDetailResource;
 use App\Http\Utilities\HttpResponseUtility;
 use App\Http\Resources\MovieResourceCollection;
 
@@ -35,13 +36,28 @@ class MovieController extends Controller
     public function updateMovie(MovieRequest $request){
         $movie = $this->movieRepo->updateMovie($request);
 
-        return $this->httpResponseUtility->successResponse(null, "Movie is updated successfully");
+        if($movie){
+            return $this->httpResponseUtility->successResponse(null, "Movie is updated successfully");
+        }else{
+            return $this->httpResponseUtility->badRequestResponse(null, "You cannot update this movie.");
+        }
     }
 
     public function deleteMovie(Request $request){
 
-        $this->movieRepo->deleteMovie($request->id);
+        $movie = $this->movieRepo->deleteMovie($request->id);
 
-        return $this->httpResponseUtility->successResponse(null, "Movie is deleted successfully");
+        if($movie){
+            return $this->httpResponseUtility->successResponse(null, "Movie is deleted successfully");
+        }else{
+            return $this->httpResponseUtility->badRequestResponse(null, "You cannot delete this movie.");
+        }
+    }
+
+    public function getMovieDetail(Request $request){
+
+        $movie = $this->movieRepo->getMovieDetail($request->id);
+
+        return $this->httpResponseUtility->successResponse(new MovieDetailResource($movie), "Success");
     }
 }

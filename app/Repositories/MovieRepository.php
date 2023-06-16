@@ -3,6 +3,7 @@
 namespace App\Repositories;
 use App\Models\Movie;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class MovieRepository extends BaseRepository
 {
@@ -24,30 +25,35 @@ class MovieRepository extends BaseRepository
 
         $imagePath = $this->uploadMovieImage($request->coverImage);
 
-        $this->model->create([
+        $movie = $this->model->create([
             'title' => $request->title,
             'summary' => $request->summary,
             'cover_image' => $imagePath,
-            'genre_id' => $request->genreId,
-            'author_id' => $request->authorId,
-            'tag_id' => $request->tagId,
+            'author_id' => Auth::user('api')->id,
             'imdb_ratings' => $request->imdbRatings,
             'pdf_link' => $request->pdfLink,
         ]);
+
+        $movie->genres()->attach($request->genreIds);
+        $movie->tags()->attach($request->tagIds);
 
         return true;
 
     }
 
     public function updateMovie($request){
-        $movie = $this->model->where('id',$request->id)->first();
+        $movie = $this->model->where('author_id',Auth::user('api')->id)->where('id',$request->id)->first();
+
+        if($movie == null){
+            return false;
+        }
 
         $imagePath = $movie->cover_image;
 
         if($request->coverImage){
             $imagePath = $this->uploadMovieImage($request->coverImage);
 
-            $oldimage = public_path($imagePath);
+            $oldimage = public_path($movie->cover_image);
             if (file_exists($oldimage)) {
                 @unlink($oldimage);
             }
@@ -57,28 +63,41 @@ class MovieRepository extends BaseRepository
             'title' => $request->title,
             'summary' => $request->summary,
             'cover_image' => $imagePath,
-            'genre_id' => $request->genreId,
-            'author_id' => $request->authorId,
-            'tag_id' => $request->tagId,
+            'author_id' => Auth::user('api')->id,
             'imdb_ratings' => $request->imdbRatings,
             'pdf_link' => $request->pdfLink,
         ]);
+
+        $movie->genres()->sync($request->genreIds);
+        $movie->tags()->sync($request->tagIds);
 
         return true;
     }
 
     public function deleteMovie($id){
 
-        $movie = $this->model->findOrFail($id);
+        $movie = $this->model->where('author_id',Auth::user('api')->id)->where('id',$id)->first();
+
+        if($movie == null){
+            return false;
+        }
 
         $oldimage = public_path($movie->cover_image);
         if (file_exists($oldimage)) {
             @unlink($oldimage);
         }
 
+        $movie->genres()->detach();
+        $movie->tags()->detach();
+
         $movie->delete();
 
         return true;
+    }
+
+    public function getMovieDetail($id){
+        $movie = $this->model->whereId($id)->first();
+        return $movie;
     }
 
     public function uploadMovieImage($coverImage){

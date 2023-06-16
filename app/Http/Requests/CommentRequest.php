@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MovieRequest extends FormRequest
+class CommentRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,19 +23,10 @@ class MovieRequest extends FormRequest
      */
     public function rules()
     {
-        $imageRule = 'required';
-        if ($this->method() == 'PUT') {
-            $imageRule = 'nullable';
-        }
-
         return [
-            'title' => 'required',
-            'summary' => 'required',
-            'coverImage' => $imageRule,
-            'genreIds' => 'required',
-            'tagIds' => 'required',
-            'imdbRatings' => 'required',
-            'pdfLink' => 'required',
+            'movieId' => 'required|integer',
+            'email' => 'required|email',
+            'description' => 'required',
         ];
     }
 }

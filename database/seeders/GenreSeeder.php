@@ -16,13 +16,22 @@ class GenreSeeder extends Seeder
     public function run()
     {
         Genre::create([
-            'name' => 'Love'
+            'name' => 'Romance'
         ]);
         Genre::create([
             'name' => 'Comedy'
         ]);
         Genre::create([
-            'name' => 'Love'
+            'name' => 'Horror'
+        ]);
+        Genre::create([
+            'name' => 'Action'
+        ]);
+        Genre::create([
+            'name' => 'Drama'
+        ]);
+        Genre::create([
+            'name' => 'Crime'
         ]);
     }
 }

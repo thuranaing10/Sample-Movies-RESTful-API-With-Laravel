@@ -11,4 +11,9 @@ class Tag extends Model
 
     protected $table = 'tags';
     protected $guarded = [];
+
+    public function movies()
+    {
+        return $this->belongsToMany(Movie::class, 'movies_tags');
+    }
 }

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\V1\AuthController;
 use App\Http\Controllers\API\V1\MovieController;
+use App\Http\Controllers\API\V1\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::middleware('auth:api')->group( function () {
 });
 
 Route::get('movies', [MovieController::class, 'getMoviesList']);
+Route::get('movies/{id}', [MovieController::class, 'getMovieDetail']);
+Route::post('comment', [CommentController::class, 'createComment']);
