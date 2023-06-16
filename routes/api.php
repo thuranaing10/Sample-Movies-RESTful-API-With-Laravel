@@ -21,16 +21,19 @@ use App\Http\Controllers\API\V1\CommentController;
 //     return $request->user();
 // });
 
+Route::group(['prefix' => 'v1'], function () {
 
-Route::post('register', [AuthController::class, 'register']);
-Route::post('login', [AuthController::class, 'login']);
+    Route::post('register', [AuthController::class, 'register']);
+    Route::post('login', [AuthController::class, 'login']);
 
-Route::middleware('auth:api')->group( function () {
-    Route::post('movies', [MovieController::class, 'createMovie']);
-    Route::put('movies', [MovieController::class, 'updateMovie']);
-    Route::delete('movies', [MovieController::class, 'deleteMovie']);
+    Route::middleware('auth:api')->group( function () {
+        Route::post('movies', [MovieController::class, 'createMovie']);
+        Route::put('movies', [MovieController::class, 'updateMovie']);
+        Route::delete('movies', [MovieController::class, 'deleteMovie']);
+    });
+
+    Route::get('movies', [MovieController::class, 'getMoviesList']);
+    Route::get('movies/{id}', [MovieController::class, 'getMovieDetail']);
+    Route::post('comment', [CommentController::class, 'createComment']);
+
 });
-
-Route::get('movies', [MovieController::class, 'getMoviesList']);
-Route::get('movies/{id}', [MovieController::class, 'getMovieDetail']);
-Route::post('comment', [CommentController::class, 'createComment']);
