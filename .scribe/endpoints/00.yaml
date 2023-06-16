@@ -26,27 +26,27 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: dolor
+        example: amet
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: chaz73@example.org
+        example: rempel.mayra@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: voluptas
+        example: ut
         type: string
         custom: []
     cleanBodyParameters:
-      name: dolor
-      email: chaz73@example.org
-      password: voluptas
+      name: amet
+      email: rempel.mayra@example.net
+      password: ut
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,19 +80,19 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: repellendus
+        example: omnis
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: non
+        example: eos
         type: string
         custom: []
     cleanBodyParameters:
-      email: repellendus
-      password: non
+      email: omnis
+      password: eos
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,59 +126,59 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: laboriosam
+        example: tempora
         type: string
         custom: []
       summary:
         name: summary
         description: ''
         required: true
-        example: excepturi
+        example: nisi
         type: string
         custom: []
       coverImage:
         name: coverImage
         description: ''
         required: true
-        example: repudiandae
+        example: dicta
         type: string
         custom: []
       genreIds:
         name: genreIds
         description: ''
         required: true
-        example: repellat
+        example: dolorem
         type: string
         custom: []
       tagIds:
         name: tagIds
         description: ''
         required: true
-        example: eum
+        example: dolor
         type: string
         custom: []
       imdbRatings:
         name: imdbRatings
         description: ''
         required: true
-        example: reprehenderit
+        example: et
         type: string
         custom: []
       pdfLink:
         name: pdfLink
         description: ''
         required: true
-        example: non
+        example: quam
         type: string
         custom: []
     cleanBodyParameters:
-      title: laboriosam
-      summary: excepturi
-      coverImage: repudiandae
-      genreIds: repellat
-      tagIds: eum
-      imdbRatings: reprehenderit
-      pdfLink: non
+      title: tempora
+      summary: nisi
+      coverImage: dicta
+      genreIds: dolorem
+      tagIds: dolor
+      imdbRatings: et
+      pdfLink: quam
     fileParameters: []
     responses: []
     responseFields: []
@@ -212,14 +212,14 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: magnam
+        example: voluptatem
         type: string
         custom: []
       summary:
         name: summary
         description: ''
         required: true
-        example: eos
+        example: voluptatum
         type: string
         custom: []
       coverImage:
@@ -233,37 +233,37 @@ endpoints:
         name: genreIds
         description: ''
         required: true
-        example: sit
+        example: autem
         type: string
         custom: []
       tagIds:
         name: tagIds
         description: ''
         required: true
-        example: voluptate
+        example: neque
         type: string
         custom: []
       imdbRatings:
         name: imdbRatings
         description: ''
         required: true
-        example: sit
+        example: et
         type: string
         custom: []
       pdfLink:
         name: pdfLink
         description: ''
         required: true
-        example: labore
+        example: ut
         type: string
         custom: []
     cleanBodyParameters:
-      title: magnam
-      summary: eos
-      genreIds: sit
-      tagIds: voluptate
-      imdbRatings: sit
-      pdfLink: labore
+      title: voluptatem
+      summary: voluptatum
+      genreIds: autem
+      tagIds: neque
+      imdbRatings: et
+      pdfLink: ut
     fileParameters: []
     responses: []
     responseFields: []
@@ -328,7 +328,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"result":{"data":[{"id":5,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/9PrFke5nH2..png","imdbRatings":6.9},{"id":4,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/KHZYMTP1k7..png","imdbRatings":6.9},{"id":3,"title":"F 9","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/xXpfHopPC9..png","imdbRatings":6.9},{"id":1,"title":"Lorem Ipsum","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/vBJGKV3uNk..png","imdbRatings":4.6}],"pagination":{"lastPage":1,"currentPage":1,"perPage":10,"totalItems":4}},"statusCode":200,"message":"Success"}'
+        content: '{"result":{"data":[{"id":5,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/9PrFke5nH2..png","imdbRatings":6.9,"comments":null},{"id":4,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/KHZYMTP1k7..png","imdbRatings":6.9,"comments":null},{"id":3,"title":"F 9","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/xXpfHopPC9..png","imdbRatings":6.9,"comments":null},{"id":1,"title":"Lorem Ipsum","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/vBJGKV3uNk..png","imdbRatings":4.6,"comments":[{"id":1,"movieId":1,"email":"test@gmail.com","createdAt":"1 hour ago"},{"id":2,"movieId":1,"email":"test@gmail.com","createdAt":"53 minutes ago"}]}],"pagination":{"lastPage":1,"currentPage":1,"perPage":10,"totalItems":4}},"statusCode":200,"message":"Success"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -377,7 +377,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"result":{"id":1,"title":"Lorem Ipsum","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/vBJGKV3uNk..png","genres":[{"id":1,"name":"Romance"}],"authorName":"thura","tags":[{"id":1,"name":"Family"}],"imdbRatings":4.6,"pdfLink":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","relatedMovies":[{"id":3,"title":"F 9","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/xXpfHopPC9..png","imdbRatings":6.9},{"id":4,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/KHZYMTP1k7..png","imdbRatings":6.9},{"id":5,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/9PrFke5nH2..png","imdbRatings":6.9}]},"statusCode":200,"message":"Success"}'
+        content: '{"result":{"id":1,"title":"Lorem Ipsum","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/vBJGKV3uNk..png","genres":[{"id":1,"name":"Romance"}],"authorName":"thura","tags":[{"id":1,"name":"Family"}],"imdbRatings":4.6,"pdfLink":"https:\/\/www.w3.org\/WAI\/ER\/tests\/xhtml\/testfiles\/resources\/pdf\/dummy.pdf","comments":[{"id":1,"movieId":1,"email":"test@gmail.com","createdAt":"1 hour ago"},{"id":2,"movieId":1,"email":"test@gmail.com","createdAt":"53 minutes ago"}],"relatedMovies":[{"id":3,"title":"F 9","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/xXpfHopPC9..png","imdbRatings":6.9,"comments":null},{"id":4,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/KHZYMTP1k7..png","imdbRatings":6.9,"comments":null},{"id":5,"title":"Red Notice","summary":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.","coverImage":"http:\/\/localhost\/images\/movies\/9PrFke5nH2..png","imdbRatings":6.9,"comments":null}]},"statusCode":200,"message":"Success"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -424,20 +424,20 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: lucie40@example.com
+        example: donnie.mohr@example.com
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: nostrum
+        example: vero
         type: string
         custom: []
     cleanBodyParameters:
       movieId: 10
-      email: lucie40@example.com
-      description: nostrum
+      email: donnie.mohr@example.com
+      description: vero
     fileParameters: []
     responses: []
     responseFields: []
