@@ -26,15 +26,15 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: amet
+                  example: natus
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: rempel.mayra@example.net
+                  example: missouri.koch@example.net
                 password:
                   type: string
                   description: ''
-                  example: ut
+                  example: necessitatibus
               required:
                 - name
                 - email
@@ -59,14 +59,44 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: omnis
+                  example: accusamus
                 password:
                   type: string
                   description: ''
-                  example: eos
+                  example: saepe
               required:
                 - email
                 - password
+      security: []
+  /api/v1/user-movies:
+    get:
+      summary: ''
+      operationId: getApiV1UserMovies
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: false
+                  message: 'Token expired!'
+                  data: null
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Token expired!'
+                  data:
+                    type: string
+                    example: null
+      tags:
+        - Endpoints
       security: []
   /api/v1/movies:
     post:
@@ -87,31 +117,31 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: tempora
+                  example: perspiciatis
                 summary:
                   type: string
                   description: ''
-                  example: nisi
+                  example: cupiditate
                 coverImage:
                   type: string
                   description: ''
-                  example: dicta
+                  example: et
                 genreIds:
                   type: string
                   description: ''
-                  example: dolorem
+                  example: quae
                 tagIds:
                   type: string
                   description: ''
-                  example: dolor
+                  example: eaque
                 imdbRatings:
                   type: string
                   description: ''
-                  example: et
+                  example: fuga
                 pdfLink:
                   type: string
                   description: ''
-                  example: quam
+                  example: sit
               required:
                 - title
                 - summary
@@ -139,11 +169,11 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: repellendus
                 summary:
                   type: string
                   description: ''
-                  example: voluptatum
+                  example: iure
                 coverImage:
                   type: string
                   description: ''
@@ -151,19 +181,19 @@ paths:
                 genreIds:
                   type: string
                   description: ''
-                  example: autem
+                  example: voluptatibus
                 tagIds:
                   type: string
                   description: ''
-                  example: neque
+                  example: delectus
                 imdbRatings:
                   type: string
                   description: ''
-                  example: et
+                  example: velit
                 pdfLink:
                   type: string
                   description: ''
-                  example: ut
+                  example: eos
               required:
                 - title
                 - summary
@@ -197,48 +227,24 @@ paths:
                   result:
                     data:
                       -
-                        id: 5
+                        id: 2
                         title: 'Red Notice'
                         summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                        coverImage: 'http://localhost/images/movies/9PrFke5nH2..png'
-                        imdbRatings: 6.9
-                        comments: null
-                      -
-                        id: 4
-                        title: 'Red Notice'
-                        summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                        coverImage: 'http://localhost/images/movies/KHZYMTP1k7..png'
-                        imdbRatings: 6.9
-                        comments: null
-                      -
-                        id: 3
-                        title: 'F 9'
-                        summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                        coverImage: 'http://localhost/images/movies/xXpfHopPC9..png'
+                        coverImage: 'http://localhost/images/movies/sCsyxNN434..png'
                         imdbRatings: 6.9
                         comments: null
                       -
                         id: 1
-                        title: 'Lorem Ipsum'
+                        title: 'Red Notice'
                         summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                        coverImage: 'http://localhost/images/movies/vBJGKV3uNk..png'
-                        imdbRatings: 4.6
-                        comments:
-                          -
-                            id: 1
-                            movieId: 1
-                            email: test@gmail.com
-                            createdAt: '1 hour ago'
-                          -
-                            id: 2
-                            movieId: 1
-                            email: test@gmail.com
-                            createdAt: '53 minutes ago'
+                        coverImage: 'http://localhost/images/movies/xJ4c8H5bTU..png'
+                        imdbRatings: 6.9
+                        comments: null
                     pagination:
                       lastPage: 1
                       currentPage: 1
                       perPage: 10
-                      totalItems: 4
+                      totalItems: 2
                   statusCode: 200
                   message: Success
                 properties:
@@ -249,49 +255,25 @@ paths:
                         type: array
                         example:
                           -
-                            id: 5
+                            id: 2
                             title: 'Red Notice'
                             summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                            coverImage: 'http://localhost/images/movies/9PrFke5nH2..png'
-                            imdbRatings: 6.9
-                            comments: null
-                          -
-                            id: 4
-                            title: 'Red Notice'
-                            summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                            coverImage: 'http://localhost/images/movies/KHZYMTP1k7..png'
-                            imdbRatings: 6.9
-                            comments: null
-                          -
-                            id: 3
-                            title: 'F 9'
-                            summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                            coverImage: 'http://localhost/images/movies/xXpfHopPC9..png'
+                            coverImage: 'http://localhost/images/movies/sCsyxNN434..png'
                             imdbRatings: 6.9
                             comments: null
                           -
                             id: 1
-                            title: 'Lorem Ipsum'
+                            title: 'Red Notice'
                             summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                            coverImage: 'http://localhost/images/movies/vBJGKV3uNk..png'
-                            imdbRatings: 4.6
-                            comments:
-                              -
-                                id: 1
-                                movieId: 1
-                                email: test@gmail.com
-                                createdAt: '1 hour ago'
-                              -
-                                id: 2
-                                movieId: 1
-                                email: test@gmail.com
-                                createdAt: '53 minutes ago'
+                            coverImage: 'http://localhost/images/movies/xJ4c8H5bTU..png'
+                            imdbRatings: 6.9
+                            comments: null
                         items:
                           type: object
                           properties:
                             id:
                               type: integer
-                              example: 5
+                              example: 2
                             title:
                               type: string
                               example: 'Red Notice'
@@ -300,7 +282,7 @@ paths:
                               example: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                             coverImage:
                               type: string
-                              example: 'http://localhost/images/movies/9PrFke5nH2..png'
+                              example: 'http://localhost/images/movies/sCsyxNN434..png'
                             imdbRatings:
                               type: number
                               example: 6.9
@@ -321,7 +303,7 @@ paths:
                             example: 10
                           totalItems:
                             type: integer
-                            example: 4
+                            example: 2
                   statusCode:
                     type: integer
                     example: 200
@@ -347,51 +329,39 @@ paths:
                 example:
                   result:
                     id: 1
-                    title: 'Lorem Ipsum'
+                    title: 'Red Notice'
                     summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                    coverImage: 'http://localhost/images/movies/vBJGKV3uNk..png'
+                    coverImage: 'http://localhost/images/movies/xJ4c8H5bTU..png'
                     genres:
                       -
                         id: 1
                         name: Romance
+                      -
+                        id: 2
+                        name: Comedy
+                      -
+                        id: 3
+                        name: Horror
                     authorName: thura
                     tags:
                       -
                         id: 1
                         name: Family
-                    imdbRatings: 4.6
-                    pdfLink: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
-                    comments:
-                      -
-                        id: 1
-                        movieId: 1
-                        email: test@gmail.com
-                        createdAt: '1 hour ago'
                       -
                         id: 2
-                        movieId: 1
-                        email: test@gmail.com
-                        createdAt: '53 minutes ago'
-                    relatedMovies:
+                        name: Dramatic
                       -
                         id: 3
-                        title: 'F 9'
-                        summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                        coverImage: 'http://localhost/images/movies/xXpfHopPC9..png'
-                        imdbRatings: 6.9
-                        comments: null
+                        name: Mysterious
+                    imdbRatings: 6.9
+                    pdfLink: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
+                    comments: null
+                    relatedMovies:
                       -
-                        id: 4
+                        id: 2
                         title: 'Red Notice'
                         summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                        coverImage: 'http://localhost/images/movies/KHZYMTP1k7..png'
-                        imdbRatings: 6.9
-                        comments: null
-                      -
-                        id: 5
-                        title: 'Red Notice'
-                        summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                        coverImage: 'http://localhost/images/movies/9PrFke5nH2..png'
+                        coverImage: 'http://localhost/images/movies/sCsyxNN434..png'
                         imdbRatings: 6.9
                         comments: null
                   statusCode: 200
@@ -405,19 +375,25 @@ paths:
                         example: 1
                       title:
                         type: string
-                        example: 'Lorem Ipsum'
+                        example: 'Red Notice'
                       summary:
                         type: string
                         example: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                       coverImage:
                         type: string
-                        example: 'http://localhost/images/movies/vBJGKV3uNk..png'
+                        example: 'http://localhost/images/movies/xJ4c8H5bTU..png'
                       genres:
                         type: array
                         example:
                           -
                             id: 1
                             name: Romance
+                          -
+                            id: 2
+                            name: Comedy
+                          -
+                            id: 3
+                            name: Horror
                         items:
                           type: object
                           properties:
@@ -436,6 +412,12 @@ paths:
                           -
                             id: 1
                             name: Family
+                          -
+                            id: 2
+                            name: Dramatic
+                          -
+                            id: 3
+                            name: Mysterious
                         items:
                           type: object
                           properties:
@@ -447,60 +429,21 @@ paths:
                               example: Family
                       imdbRatings:
                         type: number
-                        example: 4.6
+                        example: 6.9
                       pdfLink:
                         type: string
                         example: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
                       comments:
-                        type: array
-                        example:
-                          -
-                            id: 1
-                            movieId: 1
-                            email: test@gmail.com
-                            createdAt: '1 hour ago'
-                          -
-                            id: 2
-                            movieId: 1
-                            email: test@gmail.com
-                            createdAt: '53 minutes ago'
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                              example: 1
-                            movieId:
-                              type: integer
-                              example: 1
-                            email:
-                              type: string
-                              example: test@gmail.com
-                            createdAt:
-                              type: string
-                              example: '1 hour ago'
+                        type: string
+                        example: null
                       relatedMovies:
                         type: array
                         example:
                           -
-                            id: 3
-                            title: 'F 9'
-                            summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                            coverImage: 'http://localhost/images/movies/xXpfHopPC9..png'
-                            imdbRatings: 6.9
-                            comments: null
-                          -
-                            id: 4
+                            id: 2
                             title: 'Red Notice'
                             summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                            coverImage: 'http://localhost/images/movies/KHZYMTP1k7..png'
-                            imdbRatings: 6.9
-                            comments: null
-                          -
-                            id: 5
-                            title: 'Red Notice'
-                            summary: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                            coverImage: 'http://localhost/images/movies/9PrFke5nH2..png'
+                            coverImage: 'http://localhost/images/movies/sCsyxNN434..png'
                             imdbRatings: 6.9
                             comments: null
                         items:
@@ -508,16 +451,16 @@ paths:
                           properties:
                             id:
                               type: integer
-                              example: 3
+                              example: 2
                             title:
                               type: string
-                              example: 'F 9'
+                              example: 'Red Notice'
                             summary:
                               type: string
                               example: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                             coverImage:
                               type: string
-                              example: 'http://localhost/images/movies/xXpfHopPC9..png'
+                              example: 'http://localhost/images/movies/sCsyxNN434..png'
                             imdbRatings:
                               type: number
                               example: 6.9
@@ -561,15 +504,15 @@ paths:
                 movieId:
                   type: integer
                   description: ''
-                  example: 10
+                  example: 7
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: donnie.mohr@example.com
+                  example: hane.virgil@example.org
                 description:
                   type: string
                   description: ''
-                  example: vero
+                  example: libero
               required:
                 - movieId
                 - email

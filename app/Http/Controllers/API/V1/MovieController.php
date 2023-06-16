@@ -6,6 +6,7 @@ use App\Models\Movie;
 use Illuminate\Http\Request;
 use App\Http\Requests\MovieRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\MovieResource;
 use App\Repositories\MovieRepository;
 use App\Http\Resources\MovieDetailResource;
 use App\Http\Utilities\HttpResponseUtility;
@@ -19,42 +20,54 @@ class MovieController extends Controller
         $this->httpResponseUtility = $httpResponseUtility;
     }
 
-    public function getMoviesList(){
+    public function  getUserMoviesList()
+    {
+        $movies = $this->movieRepo->getUserMoviesList();
+
+        return $this->httpResponseUtility->successResponse(MovieResource::collection($movies), "Success");
+    }
+
+    public function getMoviesList()
+    {
 
         $movies = $this->movieRepo->getMoviesList();
 
         return $this->httpResponseUtility->successResponse(new MovieResourceCollection($movies), "Success");
     }
 
-    public function createMovie(MovieRequest $request){
+    public function createMovie(MovieRequest $request)
+    {
 
         $movie = $this->movieRepo->createMovie($request);
 
         return $this->httpResponseUtility->successResponse(null, "Movie is uploaded successfully");
     }
 
-    public function updateMovie(MovieRequest $request){
+    public function updateMovie(MovieRequest $request)
+    {
         $movie = $this->movieRepo->updateMovie($request);
 
-        if($movie){
+        if ($movie) {
             return $this->httpResponseUtility->successResponse(null, "Movie is updated successfully");
-        }else{
+        } else {
             return $this->httpResponseUtility->badRequestResponse(null, "You cannot update this movie.");
         }
     }
 
-    public function deleteMovie(Request $request){
+    public function deleteMovie(Request $request)
+    {
 
         $movie = $this->movieRepo->deleteMovie($request->id);
 
-        if($movie){
+        if ($movie) {
             return $this->httpResponseUtility->successResponse(null, "Movie is deleted successfully");
-        }else{
+        } else {
             return $this->httpResponseUtility->badRequestResponse(null, "You cannot delete this movie.");
         }
     }
 
-    public function getMovieDetail(Request $request){
+    public function getMovieDetail(Request $request)
+    {
 
         $movie = $this->movieRepo->getMovieDetail($request->id);
 

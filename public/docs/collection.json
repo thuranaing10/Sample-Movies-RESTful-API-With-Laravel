@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "dd0635e0-d5a9-4e8c-8b93-212a1f63dc55",
+        "_postman_id": "2579dbc9-3297-4736-bab1-ef21b1309bc1",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"amet\",\"email\":\"rempel.mayra@example.net\",\"password\":\"ut\"}"
+                            "raw": "{\"name\":\"natus\",\"email\":\"missouri.koch@example.net\",\"password\":\"necessitatibus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"omnis\",\"password\":\"eos\"}"
+                            "raw": "{\"email\":\"accusamus\",\"password\":\"saepe\"}"
                         },
                         "description": "",
                         "auth": {
@@ -80,6 +80,54 @@
                         }
                     },
                     "response": []
+                },
+                {
+                    "name": "GET api\/v1\/user-movies",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/user-movies",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/user-movies"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"success\":false,\"message\":\"Token expired!\",\"data\":null}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "POST api\/v1\/movies",
@@ -103,7 +151,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"tempora\",\"summary\":\"nisi\",\"coverImage\":\"dicta\",\"genreIds\":\"dolorem\",\"tagIds\":\"dolor\",\"imdbRatings\":\"et\",\"pdfLink\":\"quam\"}"
+                            "raw": "{\"title\":\"perspiciatis\",\"summary\":\"cupiditate\",\"coverImage\":\"et\",\"genreIds\":\"quae\",\"tagIds\":\"eaque\",\"imdbRatings\":\"fuga\",\"pdfLink\":\"sit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -134,7 +182,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"voluptatem\",\"summary\":\"voluptatum\",\"genreIds\":\"autem\",\"tagIds\":\"neque\",\"imdbRatings\":\"et\",\"pdfLink\":\"ut\"}"
+                            "raw": "{\"title\":\"repellendus\",\"summary\":\"iure\",\"genreIds\":\"voluptatibus\",\"tagIds\":\"delectus\",\"imdbRatings\":\"velit\",\"pdfLink\":\"eos\"}"
                         },
                         "description": "",
                         "auth": {
@@ -222,7 +270,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"result\":{\"data\":[{\"id\":5,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/9PrFke5nH2..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":4,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/KHZYMTP1k7..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":3,\"title\":\"F 9\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xXpfHopPC9..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":1,\"title\":\"Lorem Ipsum\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/vBJGKV3uNk..png\",\"imdbRatings\":4.6,\"comments\":[{\"id\":1,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"1 hour ago\"},{\"id\":2,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"53 minutes ago\"}]}],\"pagination\":{\"lastPage\":1,\"currentPage\":1,\"perPage\":10,\"totalItems\":4}},\"statusCode\":200,\"message\":\"Success\"}",
+                            "body": "{\"result\":{\"data\":[{\"id\":2,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/sCsyxNN434..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":1,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xJ4c8H5bTU..png\",\"imdbRatings\":6.9,\"comments\":null}],\"pagination\":{\"lastPage\":1,\"currentPage\":1,\"perPage\":10,\"totalItems\":2}},\"statusCode\":200,\"message\":\"Success\"}",
                             "name": ""
                         }
                     ]
@@ -286,7 +334,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"result\":{\"id\":1,\"title\":\"Lorem Ipsum\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/vBJGKV3uNk..png\",\"genres\":[{\"id\":1,\"name\":\"Romance\"}],\"authorName\":\"thura\",\"tags\":[{\"id\":1,\"name\":\"Family\"}],\"imdbRatings\":4.6,\"pdfLink\":\"https:\\\/\\\/www.w3.org\\\/WAI\\\/ER\\\/tests\\\/xhtml\\\/testfiles\\\/resources\\\/pdf\\\/dummy.pdf\",\"comments\":[{\"id\":1,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"1 hour ago\"},{\"id\":2,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"53 minutes ago\"}],\"relatedMovies\":[{\"id\":3,\"title\":\"F 9\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xXpfHopPC9..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":4,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/KHZYMTP1k7..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":5,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/9PrFke5nH2..png\",\"imdbRatings\":6.9,\"comments\":null}]},\"statusCode\":200,\"message\":\"Success\"}",
+                            "body": "{\"result\":{\"id\":1,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xJ4c8H5bTU..png\",\"genres\":[{\"id\":1,\"name\":\"Romance\"},{\"id\":2,\"name\":\"Comedy\"},{\"id\":3,\"name\":\"Horror\"}],\"authorName\":\"thura\",\"tags\":[{\"id\":1,\"name\":\"Family\"},{\"id\":2,\"name\":\"Dramatic\"},{\"id\":3,\"name\":\"Mysterious\"}],\"imdbRatings\":6.9,\"pdfLink\":\"https:\\\/\\\/www.w3.org\\\/WAI\\\/ER\\\/tests\\\/xhtml\\\/testfiles\\\/resources\\\/pdf\\\/dummy.pdf\",\"comments\":null,\"relatedMovies\":[{\"id\":2,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/sCsyxNN434..png\",\"imdbRatings\":6.9,\"comments\":null}]},\"statusCode\":200,\"message\":\"Success\"}",
                             "name": ""
                         }
                     ]
@@ -313,7 +361,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"movieId\":10,\"email\":\"donnie.mohr@example.com\",\"description\":\"vero\"}"
+                            "raw": "{\"movieId\":7,\"email\":\"hane.virgil@example.org\",\"description\":\"libero\"}"
                         },
                         "description": "",
                         "auth": {

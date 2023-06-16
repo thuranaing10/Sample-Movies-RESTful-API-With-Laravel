@@ -26,7 +26,8 @@ Route::group(['prefix' => 'v1'], function () {
     Route::post('register', [AuthController::class, 'register']);
     Route::post('login', [AuthController::class, 'login']);
 
-    Route::middleware('auth:api')->group( function () {
+    Route::middleware('auth:api')->group(function () {
+        Route::get('user-movies', [MovieController::class, 'getUserMoviesList']);
         Route::post('movies', [MovieController::class, 'createMovie']);
         Route::put('movies', [MovieController::class, 'updateMovie']);
         Route::delete('movies', [MovieController::class, 'deleteMovie']);
@@ -35,5 +36,4 @@ Route::group(['prefix' => 'v1'], function () {
     Route::get('movies', [MovieController::class, 'getMoviesList']);
     Route::get('movies/{id}', [MovieController::class, 'getMovieDetail']);
     Route::post('comment', [CommentController::class, 'createComment']);
-
 });
