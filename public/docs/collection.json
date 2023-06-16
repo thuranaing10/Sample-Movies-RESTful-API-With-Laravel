@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "2579dbc9-3297-4736-bab1-ef21b1309bc1",
+        "_postman_id": "1a9b558e-3ee5-4dd3-bc8a-74956cadbf02",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"natus\",\"email\":\"missouri.koch@example.net\",\"password\":\"necessitatibus\"}"
+                            "raw": "{\"name\":\"consequuntur\",\"email\":\"bianka64@example.com\",\"password\":\"reiciendis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"accusamus\",\"password\":\"saepe\"}"
+                            "raw": "{\"email\":\"porro\",\"password\":\"id\"}"
                         },
                         "description": "",
                         "auth": {
@@ -151,7 +151,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"perspiciatis\",\"summary\":\"cupiditate\",\"coverImage\":\"et\",\"genreIds\":\"quae\",\"tagIds\":\"eaque\",\"imdbRatings\":\"fuga\",\"pdfLink\":\"sit\"}"
+                            "raw": "{\"title\":\"odit\",\"summary\":\"excepturi\",\"coverImage\":\"ab\",\"genreIds\":\"minus\",\"tagIds\":\"facere\",\"imdbRatings\":\"ratione\",\"pdfLink\":\"vero\"}"
                         },
                         "description": "",
                         "auth": {
@@ -182,7 +182,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"repellendus\",\"summary\":\"iure\",\"genreIds\":\"voluptatibus\",\"tagIds\":\"delectus\",\"imdbRatings\":\"velit\",\"pdfLink\":\"eos\"}"
+                            "raw": "{\"title\":\"sed\",\"summary\":\"aut\",\"genreIds\":\"modi\",\"tagIds\":\"aliquid\",\"imdbRatings\":\"quaerat\",\"pdfLink\":\"repudiandae\"}"
                         },
                         "description": "",
                         "auth": {
@@ -262,7 +262,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "59"
+                                    "value": "57"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -270,7 +270,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"result\":{\"data\":[{\"id\":2,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/sCsyxNN434..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":1,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xJ4c8H5bTU..png\",\"imdbRatings\":6.9,\"comments\":null}],\"pagination\":{\"lastPage\":1,\"currentPage\":1,\"perPage\":10,\"totalItems\":2}},\"statusCode\":200,\"message\":\"Success\"}",
+                            "body": "{\"result\":{\"data\":[{\"id\":3,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/YAM1bQDLmK..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":2,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/sCsyxNN434..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":1,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xJ4c8H5bTU..png\",\"imdbRatings\":6.9,\"comments\":[{\"id\":1,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"1 minute ago\"},{\"id\":2,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"1 minute ago\"}]}],\"pagination\":{\"lastPage\":1,\"currentPage\":1,\"perPage\":10,\"totalItems\":3}},\"statusCode\":200,\"message\":\"Success\"}",
                             "name": ""
                         }
                     ]
@@ -326,7 +326,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "58"
+                                    "value": "56"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -334,7 +334,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"result\":{\"id\":1,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xJ4c8H5bTU..png\",\"genres\":[{\"id\":1,\"name\":\"Romance\"},{\"id\":2,\"name\":\"Comedy\"},{\"id\":3,\"name\":\"Horror\"}],\"authorName\":\"thura\",\"tags\":[{\"id\":1,\"name\":\"Family\"},{\"id\":2,\"name\":\"Dramatic\"},{\"id\":3,\"name\":\"Mysterious\"}],\"imdbRatings\":6.9,\"pdfLink\":\"https:\\\/\\\/www.w3.org\\\/WAI\\\/ER\\\/tests\\\/xhtml\\\/testfiles\\\/resources\\\/pdf\\\/dummy.pdf\",\"comments\":null,\"relatedMovies\":[{\"id\":2,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/sCsyxNN434..png\",\"imdbRatings\":6.9,\"comments\":null}]},\"statusCode\":200,\"message\":\"Success\"}",
+                            "body": "{\"result\":{\"id\":1,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/xJ4c8H5bTU..png\",\"genres\":[{\"id\":1,\"name\":\"Romance\"},{\"id\":2,\"name\":\"Comedy\"},{\"id\":3,\"name\":\"Horror\"}],\"authorName\":\"thura\",\"tags\":[{\"id\":1,\"name\":\"Family\"},{\"id\":2,\"name\":\"Dramatic\"},{\"id\":3,\"name\":\"Mysterious\"}],\"imdbRatings\":6.9,\"pdfLink\":\"https:\\\/\\\/www.w3.org\\\/WAI\\\/ER\\\/tests\\\/xhtml\\\/testfiles\\\/resources\\\/pdf\\\/dummy.pdf\",\"comments\":[{\"id\":1,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"1 minute ago\"},{\"id\":2,\"movieId\":1,\"email\":\"test@gmail.com\",\"createdAt\":\"1 minute ago\"}],\"relatedMovies\":[{\"id\":2,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/sCsyxNN434..png\",\"imdbRatings\":6.9,\"comments\":null},{\"id\":3,\"title\":\"Red Notice\",\"summary\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\"coverImage\":\"http:\\\/\\\/localhost\\\/images\\\/movies\\\/YAM1bQDLmK..png\",\"imdbRatings\":6.9,\"comments\":null}]},\"statusCode\":200,\"message\":\"Success\"}",
                             "name": ""
                         }
                     ]
@@ -361,7 +361,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"movieId\":7,\"email\":\"hane.virgil@example.org\",\"description\":\"libero\"}"
+                            "raw": "{\"movieId\":3,\"email\":\"fbeahan@example.com\",\"description\":\"optio\"}"
                         },
                         "description": "",
                         "auth": {
